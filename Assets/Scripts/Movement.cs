@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float minspeed = -0.2f;
     [SerializeField] private float rotatespeed = 1f;
     private float rbvel;
-    private float forwardspeed = 0;
+    public float forwardspeed = 0;
     private float lastForwardSpeed = 0;
 
     private bool _moveForward;

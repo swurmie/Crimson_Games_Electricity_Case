@@ -4,53 +4,43 @@ using UnityEngine.InputSystem;
 
 public class playercollectibles : MonoBehaviour
 {
-    float haspick = 100;
-    float hasblock = 0;
-    private bool mine;
-    private bool place;
-    [SerializeField] GameObject obstacle;
-    [SerializeField] GameObject spawner;
+    public float interacted = 0;
+    private bool interacting;
     
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name == "Key")
-        {
-            haspick += 4;
-            Debug.Log(haspick);
-            Destroy(other.gameObject);
-        }
-    }
 
     private void Update()
     {
-        mine = Keyboard.current.spaceKey.isPressed;
-        place = Keyboard.current.vKey.wasPressedThisFrame;
-
-        if (hasblock > 0 && place == true)
-        {
-            //Instantiate(obstacle, this.transform.position + this.transform.forward * 10, this.transform.rotation);
-            Instantiate(obstacle, spawner.transform.position, spawner.transform.rotation);
-            hasblock -= 1;
-            Debug.Log(hasblock + " blocks");
-        }
-    }
-
-
-    private void FixedUpdate()
-    {
-        
+        interacting = Keyboard.current.eKey.isPressed;
     }
 
     void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Obstacle") && haspick > 0 && mine == true)
+        if (collision.gameObject.CompareTag("Interactable") && interacting == true)
         {
-            Destroy(collision.gameObject);
-            haspick -= 1;
-            Debug.Log(haspick + " picks");
-            hasblock += 1;
-            Debug.Log(hasblock + " blocks");
+            GameObject obj = collision.gameObject;
+            obj.tag = "Untagged";
+            //obj.GetComponent<Collider>().enabled = false;
+
+            Renderer rend = obj.GetComponent<Renderer>();
+        if (rend != null)
+        {
+            Material mat = rend.material;
+            mat.SetFloat("_Mode", 3);
+            mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
+            mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+            mat.SetInt("_ZWrite", 0);
+            mat.DisableKeyword("_ALPHATEST_ON");
+            mat.EnableKeyword("_ALPHABLEND_ON");
+            mat.DisableKeyword("_ALPHAPREMULTIPLY_ON");
+            mat.renderQueue = 3000;
+
+            Color color = mat.color;
+            color.a = 0.3f;
+            mat.color = color;
+        }
+
+            interacted += 1;
+            Debug.Log(interacted);
         }
     }
 }
