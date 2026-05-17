@@ -15,6 +15,6 @@ public class CollectiblesUI : MonoBehaviour
     void FixedUpdate()
     {
         string interacted = player_interacted.interacted.ToString();
-        amountImproved.text = interacted;
+        amountImproved.text = interacted  + " / 4";
     }
 }
