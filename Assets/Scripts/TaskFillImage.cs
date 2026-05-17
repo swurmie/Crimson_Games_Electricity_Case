@@ -7,11 +7,11 @@ public class hpBar : MonoBehaviour
     private playercollectibles player_interacted;
     public GameObject player; 
     public Image taskbar;
-    public void Start()
+    void Start()
     {
          player_interacted = player.GetComponent<playercollectibles>();
     }
-    public void Update()
+    void Update()
     {
         
         float interacted = player_interacted.interacted;
