@@ -1,4 +1,5 @@
 // Some stupid rigidbody based movement by Dani
+// Fixed: momentum no longer resets on landing
 
 using System;
 using UnityEngine;
@@ -51,12 +52,11 @@ public class PlayerMovement : MonoBehaviour {
     }
     
     void Start() {
-        playerScale =  transform.localScale;
+        playerScale = transform.localScale;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-    
     private void FixedUpdate() {
         Movement();
     }
@@ -201,11 +201,15 @@ public class PlayerMovement : MonoBehaviour {
             rb.AddForce(moveSpeed * orientation.transform.forward * Time.deltaTime * -mag.y * counterMovement);
         }
         
-        //Limit diagonal running. This will also cause a full stop if sliding fast and un-crouching, so not optimal.
+        // FIX: Only hard-clamp velocity when the player is actively giving input.
+        // Previously this ran unconditionally, killing momentum the moment you landed
+        // even if you weren't pressing anything.
         if (Mathf.Sqrt((Mathf.Pow(rb.linearVelocity.x, 2) + Mathf.Pow(rb.linearVelocity.z, 2))) > maxSpeed) {
-            float fallspeed = rb.linearVelocity.y;
-            Vector3 n = rb.linearVelocity.normalized * maxSpeed;
-            rb.linearVelocity = new Vector3(n.x, fallspeed, n.z);
+            if (x != 0 || y != 0) {
+                float fallspeed = rb.linearVelocity.y;
+                Vector3 n = rb.linearVelocity.normalized * maxSpeed;
+                rb.linearVelocity = new Vector3(n.x, fallspeed, n.z);
+            }
         }
     }
 
