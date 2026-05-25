@@ -120,11 +120,14 @@ public class PlayerMovement : MonoBehaviour {
             return;
         }
         
-        //If speed is larger than maxspeed, cancel out the input so you don't go over max speed
-        if (x > 0 && xMag > maxSpeed) x = 0;
-        if (x < 0 && xMag < -maxSpeed) x = 0;
-        if (y > 0 && yMag > maxSpeed) y = 0;
-        if (y < 0 && yMag < -maxSpeed) y = 0;
+        // FIX: Only suppress input if grounded. Previously this ran on landing while
+        // airborne momentum was still carrying the player, causing a sudden full stop.
+        if (grounded) {
+            if (x > 0 && xMag > maxSpeed) x = 0;
+            if (x < 0 && xMag < -maxSpeed) x = 0;
+            if (y > 0 && yMag > maxSpeed) y = 0;
+            if (y < 0 && yMag < -maxSpeed) y = 0;
+        }
 
         //Some multipliers
         float multiplier = 1f, multiplierV = 1f;
