@@ -2,14 +2,21 @@ using UnityEngine;
 
 public class DisableScript : MonoBehaviour
 {
-    private PlayerMovement playerMovement; // lowercase, and use the actual type
+    private PlayerMovement playerMovement;
+    private Pausing canvasmenu;
+
+    void Awake()
+    {
+        playerMovement = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
+        canvasmenu = GameObject.FindWithTag("Player").GetComponent<Pausing>();
+    }
 
     void Start()
     {
-        playerMovement = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
         playerMovement.enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        canvasmenu.canvasmenu = true;
     }
 
     void OnEnable()
@@ -19,6 +26,7 @@ public class DisableScript : MonoBehaviour
             playerMovement.enabled = false;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            canvasmenu.canvasmenu = true;
         }
     }
 
@@ -29,6 +37,7 @@ public class DisableScript : MonoBehaviour
             playerMovement.enabled = true;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            canvasmenu.canvasmenu = false;
         }
     }
 }
