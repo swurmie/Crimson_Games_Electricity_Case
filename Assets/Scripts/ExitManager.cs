@@ -1,17 +1,13 @@
 using UnityEngine;
 
 public class ExitManager : MonoBehaviour
-{
-    public static Exitmanager Instance;
-    public int score = 0;
-
-    void Awake()
+{    
+    public void ExitGame()
     {
-        Instance = this;
-    }
-
-    public void AddScore(int amount)
-    {
-        
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #else
+        Application.Quit();
+        #endif
     }
 }
