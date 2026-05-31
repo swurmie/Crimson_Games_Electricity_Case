@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Obstacle
   - Interactable
+  - Outlining
+  - Door
+  - DoorClicked
   layers:
   - Default
   - TransparentFX

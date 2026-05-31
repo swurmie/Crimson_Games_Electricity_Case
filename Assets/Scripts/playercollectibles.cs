@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class playercollectibles : MonoBehaviour
 {
     public float interacted = 0;
-    public float interactRange = 3f;
+    public float interactRange = 7f;
 
     private void Update()
     {
@@ -13,6 +13,11 @@ public class playercollectibles : MonoBehaviour
             Collider[] nearby = Physics.OverlapSphere(transform.position, interactRange);
             foreach (Collider col in nearby)
             {
+                if (col.CompareTag("Door"))
+                {
+                    GameObject obj = col.gameObject;
+                    obj.tag = "DoorClicked";
+                }
                 if (col.CompareTag("Interactable"))
                 {
                     GameObject obj = col.gameObject;

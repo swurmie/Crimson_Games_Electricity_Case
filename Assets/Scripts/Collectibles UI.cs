@@ -11,7 +11,6 @@ public class CollectiblesUI : MonoBehaviour
         player_interacted = player.GetComponent<playercollectibles>();
     }
     
-    // Update is called once per frame
     void FixedUpdate()
     {
         string interacted = player_interacted.interacted.ToString();

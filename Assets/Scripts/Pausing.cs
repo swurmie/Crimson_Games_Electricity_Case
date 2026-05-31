@@ -20,7 +20,6 @@ public class Pausing : MonoBehaviour
             Pause = !Pause;
         }
 
-        // only unlock if BOTH pause and canvasmenu are false
         if (!Pause && !canvasmenu)
         {
             Pause_screen.SetActive(false);
@@ -33,7 +32,7 @@ public class Pausing : MonoBehaviour
         }
         else
         {
-            Pause_screen.SetActive(Pause); // only show pause screen when actually paused
+            Pause_screen.SetActive(Pause); 
             if (playerMovement != null)
             {
                 playerMovement.enabled = false;
