@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EInteractCheck : MonoBehaviour
 {
-    public float detectionRadius = 2.59f;
+    public float detectionRadius = 2.3f;
     private Transform player;
     private bool playerNearby = false;
     public GameObject InteractOverlay;
