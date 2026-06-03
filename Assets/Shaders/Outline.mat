@@ -39,7 +39,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Outline_Thickness: 0
-    - _Outline_size: 1.01
+    - _Outline_size: 1.03
     - _QueueControl: 0
     - _QueueOffset: 0
     - _bloom_multiplier: 100
