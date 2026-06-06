@@ -7,6 +7,7 @@ public class Pausing : MonoBehaviour
     [SerializeField] bool Pause = false;
     public GameObject Pause_screen;
     public bool canvasmenu;
+    public static int openMenus = 0;
 
     private void Start()
     {
@@ -15,7 +16,7 @@ public class Pausing : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (Keyboard.current.escapeKey.wasPressedThisFrame && openMenus == 0)
         {
             Pause = !Pause;
         }
