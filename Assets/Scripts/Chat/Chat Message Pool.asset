@@ -118,7 +118,25 @@ MonoBehaviour:
     - I am so lost
     - What are we doing?
     - Nice house bro
-    - Nice house bro
+    - Hello from Germany
+    - Hello from Brazil
+    - Hello from France
+    - Hello from Spain
+    - Uhuh
+    - Pog
+    - Where is the subway surfers
+    - Please show me something interesting
+    - I don't understand
+    - This is actually eye opening
+    - You are making my house look like a joke
+    - Im writing this down
+    - I wish they taught this stuff
+    - I wish they taught this stuff
+  - tag: pause
+    messages:
+    - Is bro sleeping
+    - Wake up u have a world to save
+    - This is not helping man
   - tag: good_choice
     messages:
     - That's what i woulda did
