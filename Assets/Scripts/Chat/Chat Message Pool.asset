@@ -122,21 +122,33 @@ MonoBehaviour:
   - tag: good_choice
     messages:
     - That's what i woulda did
+    - Yeah good choice!
+    - Nice
   - tag: mid_choice
     messages:
     - I can see it
+    - I guess?
+    - Could be worse
   - tag: bad_choice
     messages:
     - Okay, but why would u do that?
+    - There were better options
+    - I don't know why that one
+    - If it wasnt mandatory id click off this stream
   - tag: oven
     messages:
     - I barely preheat, just let it heat up with the food inside
     - An hour early is insane, idk if that is needed
     - Chat i dont know
     - Just put it in the airfryer
+    - I cant imagine it makes a big enough difference
+    - I cant imagine it makes a big enough difference
   - tag: tv
     messages:
-    - Oven message
+    - tv messages
   - tag: outlet
     messages:
-    - Oven message
+    - Outlet message
+  - tag: wash
+    messages:
+    - wash messages
