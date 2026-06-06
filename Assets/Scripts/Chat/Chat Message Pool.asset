@@ -119,9 +119,21 @@ MonoBehaviour:
     - What are we doing?
     - Nice house bro
     - Nice house bro
+  - tag: good_choice
+    messages:
+    - That's what i woulda did
+  - tag: mid_choice
+    messages:
+    - I can see it
+  - tag: bad_choice
+    messages:
+    - Okay, but why would u do that?
   - tag: oven
     messages:
-    - Oven message
+    - I barely preheat, just let it heat up with the food inside
+    - An hour early is insane, idk if that is needed
+    - Chat i dont know
+    - Just put it in the airfryer
   - tag: tv
     messages:
     - Oven message
