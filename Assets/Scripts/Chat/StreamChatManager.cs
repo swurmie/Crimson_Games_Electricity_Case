@@ -46,4 +46,27 @@ public class StreamChatManager : MonoBehaviour
         if (chatContent.childCount > 5)
             Destroy(chatContent.GetChild(0).gameObject);
     }
+
+    public void OnGoodChoice()
+    {
+        SwitchCategory("good_choice");
+        Invoke("ResetToGeneric", 5f);
+    }
+
+    public void OnMidChoice()
+    {
+        SwitchCategory("mid_choice");
+        Invoke("ResetToGeneric", 5f);
+    }
+
+    public void OnBadChoice()
+    {
+        SwitchCategory("bad_choice");
+        Invoke("ResetToGeneric", 5f);
+    }
+
+    void ResetToGeneric()
+    {
+        SwitchCategory("generic");
+    }
 }
