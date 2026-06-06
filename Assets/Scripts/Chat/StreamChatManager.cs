@@ -6,7 +6,9 @@ public class StreamChatManager : MonoBehaviour
     [SerializeField] GameObject chatBubblePrefab;
     [SerializeField] Transform chatContent;
     [SerializeField] ChatMessagePool messagePool;
+    private string currentCategory = "generic";
 
+    
     void Start()
     {
         StartCoroutine(ChatLoop());
@@ -17,8 +19,13 @@ public class StreamChatManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(0.5f, 2f));
-            SpawnMessage("generic");
+            SpawnMessage(currentCategory);
         }
+    }
+
+    public void SwitchCategory(string tag)
+    {
+        currentCategory = tag;
     }
 
     public void TriggerEvent(string eventTag)
