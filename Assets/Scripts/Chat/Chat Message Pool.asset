@@ -163,7 +163,11 @@ MonoBehaviour:
     - I cant imagine it makes a big enough difference
   - tag: tv
     messages:
-    - tv messages
+    - Why don't you just use earbuds
+    - Just turn it off completely
+    - All these people in chat saying turn it off don't understand
+    - The screen eats power lmao
+    - The music is so nice while doing literally anything
   - tag: outlet
     messages:
     - Outlet message
