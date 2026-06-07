@@ -316,6 +316,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 589510d4c6a4edb44abfe9094950e0a9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3bd59b7a61aef3645a74cb4116a0d362, type: 2}
     - target: {fileID: 919132149155446097, guid: 589510d4c6a4edb44abfe9094950e0a9, type: 3}
       propertyPath: m_Name
       value: arrow_tv
@@ -6278,6 +6282,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 589510d4c6a4edb44abfe9094950e0a9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3bd59b7a61aef3645a74cb4116a0d362, type: 2}
     - target: {fileID: 919132149155446097, guid: 589510d4c6a4edb44abfe9094950e0a9, type: 3}
       propertyPath: m_Name
       value: arrow_wash
@@ -20962,6 +20970,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 589510d4c6a4edb44abfe9094950e0a9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3bd59b7a61aef3645a74cb4116a0d362, type: 2}
     - target: {fileID: 919132149155446097, guid: 589510d4c6a4edb44abfe9094950e0a9, type: 3}
       propertyPath: m_Name
       value: arrow_outlet
@@ -21948,6 +21960,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 589510d4c6a4edb44abfe9094950e0a9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3bd59b7a61aef3645a74cb4116a0d362, type: 2}
     - target: {fileID: 919132149155446097, guid: 589510d4c6a4edb44abfe9094950e0a9, type: 3}
       propertyPath: m_Name
       value: arrow_oven
