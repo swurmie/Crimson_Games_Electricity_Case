@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: e82219472dbe3d44c9b1ebbbf799554f
+guid: 1f4c9406faa498543b4445f9fdd15004
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: ddor texture
-    second: {fileID: 2800000, guid: b7cef8961d6658b4bbbb377e7dc8bc26, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

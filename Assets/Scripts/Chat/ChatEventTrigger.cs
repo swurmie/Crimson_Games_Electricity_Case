@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class ChatEventTrigger : MonoBehaviour
 {
@@ -8,18 +7,11 @@ public class ChatEventTrigger : MonoBehaviour
 
     void OnEnable()
     {
-        StartCoroutine(DelayedSwitch());
-    }
-
-    IEnumerator DelayedSwitch()
-    {
-        yield return new WaitForSeconds(2f);
         chatManager.SwitchCategory(categoryTag);
     }
 
     void OnDisable()
     {
-        StopAllCoroutines();
         chatManager.SwitchCategory("generic");
     }
 }
