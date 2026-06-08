@@ -16,7 +16,7 @@ public class FlickerRec : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (timer > 0 && timer < 200)
+        if (timer > 0 && timer < 160)
         {
             timer += 1;
         }
@@ -24,7 +24,7 @@ public class FlickerRec : MonoBehaviour
         {
             timer = 1;
         }
-        if (timer > 0 && timer < 100)
+        if (timer > 0 && timer < 80)
         {
             myCanvas.SetActive(true);
         }

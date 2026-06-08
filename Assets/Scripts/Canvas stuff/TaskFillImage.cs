@@ -15,7 +15,7 @@ public class TaskFillImage : MonoBehaviour
     {
         
         float interacted = player_interacted.interacted;
-        //Debug.Log(interacted * (1f/4f));
-        taskbar.fillAmount = interacted * (1f / 4f);
+        //Debug.Log(interacted * (1f/6f));
+        taskbar.fillAmount = interacted * (1f / 6f);
     }
 }

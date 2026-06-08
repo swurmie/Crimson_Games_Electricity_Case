@@ -27,7 +27,7 @@ public class EndDay : MonoBehaviour
         score = score_manager.score; //
         if (gameObject.CompareTag("DoorClicked"))
         {
-            if (interacted == 4f)
+            if (interacted == 6f)
             {
                 Calculate();
                 Debug.Log("Calculating");
@@ -43,12 +43,12 @@ public class EndDay : MonoBehaviour
 
     void Calculate()
     {
-        if (score == 400)
+        if (score == 600)
         {
             Debug.Log("Perfect");
             Perfect.SetActive(true);
         }
-        else if (score >= 202)
+        else if (score >= 300)
         {
             Debug.Log("Good");
             Good.SetActive(true);

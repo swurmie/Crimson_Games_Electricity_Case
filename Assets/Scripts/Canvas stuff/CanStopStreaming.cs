@@ -14,7 +14,7 @@ void Start()
     void Update()
     {
         interacted = player_interacted.interacted;
-        if (interacted == 4f)
+        if (interacted == 6f)
         {
             Debug.Log("YouDone");
             YouDone.SetActive(true);
