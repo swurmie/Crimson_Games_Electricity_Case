@@ -133,11 +133,18 @@ MonoBehaviour:
     - I wish they taught this stuff
     - Why are we doing this
     - can someone give me a summary
+    - 'Please teach us '
+    - I really am just here because i have to be
   - tag: pause
     messages:
     - Is bro sleeping
     - Wake up u have a world to save
     - This is not helping man
+    - Take your time
+    - zzZ
+    - zzz
+    - zZz
+    - Zzz
   - tag: good_choice
     messages:
     - That's what i woulda did
@@ -188,3 +195,24 @@ MonoBehaviour:
     - Just hand wash it
     - just turn it inside out and wear it again lol
     - Chat can yall lock in
+  - tag: fridge
+    messages:
+    - I usually stock the entire thing then dont leave the house lol
+    - I only have the bare essentials
+    - does it really matter
+    - yoo
+    - I have been wondering about this
+    - my mom always yells at me not to keep the door open for too long
+    - its best to keep airflow nice, thats also why the door should be closed.
+  - tag: laptop
+    messages:
+    - 'I just let it sleep, so i can open it and continue whenever '
+    - i knew it drew power but i didnt really think much of it
+    - i am on my laptop the entire day xdd
+    - Its best to turn it off anyhow when you are not using it, saving energy and
+      stuff
+    - IT CONSTANTLY DRAWS POWER
+    - idk why people are complaining so much
+    - thats kinda good to know
+    - Do i also have to do this?
+    - Can you hurry up
