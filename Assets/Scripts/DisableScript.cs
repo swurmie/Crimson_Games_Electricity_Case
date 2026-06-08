@@ -3,7 +3,7 @@ using UnityEngine;
 public class DisableScript : MonoBehaviour
 {
     private PlayerMovement playerMovement;
-    private Pausing canvasmenu;
+    static Pausing canvasmenu;
 
     void Awake()
     {

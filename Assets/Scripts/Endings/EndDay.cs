@@ -14,7 +14,6 @@ public class EndDay : MonoBehaviour
     public GameObject Perfect;
     public GameObject Good;
     public GameObject Bad;
-    public GameObject Terrible;
 
     void Start()
     {
@@ -54,15 +53,10 @@ public class EndDay : MonoBehaviour
             Debug.Log("Good");
             Good.SetActive(true);
         }
-        else if (score >= 5)
+        else if (score >= 0)
         {
             Debug.Log("Bad");
             Bad.SetActive(true);
-        }
-        else if (score == 4)
-        {
-            Debug.Log("Terrible");
-            Terrible.SetActive(true);
         }
 
         gameObject.tag = "Untagged";
