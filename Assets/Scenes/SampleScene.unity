@@ -25593,7 +25593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FacePlayerAndBob
   amplitude: 0.05
-  frequency: 0.2
+  frequency: 2
 --- !u!1 &1311639003
 GameObject:
   m_ObjectHideFlags: 0
@@ -28503,7 +28503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FacePlayerAndBob
   amplitude: 0.05
-  frequency: 0.2
+  frequency: 2
 --- !u!1 &1545292811
 GameObject:
   m_ObjectHideFlags: 0
@@ -34004,7 +34004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FacePlayerAndBob
   amplitude: 0.05
-  frequency: 0.2
+  frequency: 2
 --- !u!1 &1599792841
 GameObject:
   m_ObjectHideFlags: 0
@@ -40901,7 +40901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FacePlayerAndBob
   amplitude: 0.05
-  frequency: 0.2
+  frequency: 2
 --- !u!1 &2034240512 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3420106525838406734, guid: a80fcf2fce0f5124eac665b2e13ff25d, type: 3}
